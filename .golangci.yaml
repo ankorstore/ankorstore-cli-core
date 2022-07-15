@@ -1,0 +1,22 @@
+---
+linters:
+  enable-all: true
+  disable:
+    - exhaustruct
+    - exhaustivestruct
+    - godox
+    - ireturn # TODO: this needs a separate cleanup
+    - varnamelen # TODO: consider if we should actually follow this practice
+
+linters-settings:
+  gofumpt:
+    extra-rules: true
+  gomnd:
+    ignored-numbers: [1,2,3]
+
+issues:
+  exclude-rules:
+    - path: _test.go
+      linters:
+        - gochecknoglobals
+        - unused
