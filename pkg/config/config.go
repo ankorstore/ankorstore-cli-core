@@ -3,8 +3,8 @@ package config
 import (
 	"context"
 	"fmt"
-	"github.com/ankorstore/ankor-core/pkg/filesystem"
-	"github.com/ankorstore/ankor-core/pkg/util"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/filesystem"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 	"github.com/go-errors/errors"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"

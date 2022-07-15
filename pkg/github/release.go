@@ -3,8 +3,8 @@ package github
 import (
 	"context"
 	"fmt"
-	"github.com/ankorstore/ankor-core/pkg/filesystem"
-	"github.com/ankorstore/ankor-core/pkg/util"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/filesystem"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 	"github.com/go-errors/errors"
 	"net/http"
 	"strings"

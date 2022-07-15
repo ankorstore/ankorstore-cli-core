@@ -1,7 +1,7 @@
 package docker
 
 import (
-	"github.com/ankorstore/ankor-core/pkg/docker/mocks"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/docker/mocks"
 	"io"
 	"regexp"
 	"strings"

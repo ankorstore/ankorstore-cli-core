@@ -2,8 +2,8 @@ package utils
 
 import (
 	"fmt"
-	"github.com/ankorstore/ankor-core/pkg/errorhandling"
-	"github.com/ankorstore/ankor-core/pkg/util"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 	"github.com/go-errors/errors"
 	"github.com/manifoldco/promptui"
 	"github.com/rs/zerolog/log"

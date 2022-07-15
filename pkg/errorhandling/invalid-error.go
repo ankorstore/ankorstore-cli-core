@@ -2,7 +2,7 @@ package errorhandling
 
 import (
 	"fmt"
-	"github.com/ankorstore/ankor-core/pkg/util"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 )
 
 type InvalidError struct {

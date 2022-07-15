@@ -2,7 +2,7 @@ package github
 
 import (
 	"context"
-	"github.com/ankorstore/ankor-core/pkg/util"
+	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 	"github.com/google/go-github/v44/github"
 	"github.com/rs/zerolog/log"
 	"github.com/spf13/viper"
