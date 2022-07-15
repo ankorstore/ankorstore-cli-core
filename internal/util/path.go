@@ -3,7 +3,7 @@ package util
 import (
 	"bufio"
 	"fmt"
-	"github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
+	"github.com/ankorstore/ankorstore-cli-core/internal/errorhandling"
 	"os"
 	"os/exec"
 	"path/filepath"

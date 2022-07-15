@@ -7,7 +7,7 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
-	"github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
+	"github.com/ankorstore/ankorstore-cli-core/internal/errorhandling"
 	"io"
 	"math/big"
 	"os"

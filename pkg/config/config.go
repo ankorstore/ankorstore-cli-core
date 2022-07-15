@@ -3,8 +3,8 @@ package config
 import (
 	"context"
 	"fmt"
+	util2 "github.com/ankorstore/ankorstore-cli-core/internal/util"
 	"github.com/ankorstore/ankorstore-cli-core/pkg/filesystem"
-	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
 	"github.com/go-errors/errors"
 	"github.com/rs/zerolog"
 	"github.com/rs/zerolog/log"
@@ -29,14 +29,14 @@ func InitConfig(flags *pflag.FlagSet) error {
 	if err != nil {
 		return errors.Wrap(err, 0)
 	}
-	dirs := util.NewDirs()
+	dirs := util2.NewDirs()
 	confDir := dirs.GetConfigDir()
 
 	if cfgFile != "" {
 		viper.SetConfigFile(cfgFile)
 	} else {
 		viper.AddConfigPath(confDir)
-		viper.SetConfigName(util.AppName)
+		viper.SetConfigName(util2.AppName)
 	}
 
 	viper.AutomaticEnv() // read in environment variables that match
@@ -68,12 +68,12 @@ func validateConfigAgainstSchema(parsedConfig map[string]interface{}) error {
 }
 
 func InitLogger(quiet bool, noColor bool) {
-	dirs := util.NewDirs()
+	dirs := util2.NewDirs()
 	logDir := dirs.GetLogsDir()
 
 	filesystem.CreateFolder(logDir)
 
-	logPath := filepath.Join(logDir, util.AppName+".log")
+	logPath := filepath.Join(logDir, util2.AppName+".log")
 	fileWriter, _ := os.OpenFile(logPath, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 
 	if quiet {

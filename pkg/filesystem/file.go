@@ -2,7 +2,7 @@ package filesystem
 
 import (
 	"fmt"
-	"github.com/ankorstore/ankorstore-cli-core/pkg/util"
+	util2 "github.com/ankorstore/ankorstore-cli-core/internal/util"
 	"github.com/go-errors/errors"
 	"io"
 	"io/fs"
@@ -12,7 +12,7 @@ import (
 )
 
 func SaveBinaryFile(target string, assetReader io.ReadCloser) error {
-	f := fmt.Sprintf("%s/%s", target, util.AppName)
+	f := fmt.Sprintf("%s/%s", target, util2.AppName)
 	err := FolderExist(f)
 	if err == nil {
 		err = Delete(f)
@@ -40,7 +40,7 @@ func SaveFile(rc io.ReadCloser, executablePath string, mode fs.FileMode) error {
 	ext := path.Ext(executablePath)
 	filename := path.Base(executablePath)
 
-	dirs := util.NewDirs()
+	dirs := util2.NewDirs()
 	binDir := dirs.GetBinDir()
 
 	if len(ext) > 0 {

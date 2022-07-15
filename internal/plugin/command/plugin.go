@@ -1,9 +1,8 @@
 package command
 
 import (
-	error_handler "github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
-	ankor "github.com/ankorstore/ankorstore-cli-core/pkg/plugin"
-
+	error_handler "github.com/ankorstore/ankorstore-cli-core/internal/errorhandling"
+	ankor "github.com/ankorstore/ankorstore-cli-core/internal/plugin"
 	"github.com/hashicorp/go-plugin"
 	"github.com/spf13/cobra"
 )

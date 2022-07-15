@@ -1,8 +1,8 @@
 package plugin
 
 import (
-	"github.com/ankorstore/ankorstore-cli-core/pkg/plugin"
-	"github.com/ankorstore/ankorstore-cli-core/pkg/plugin/command"
+	"github.com/ankorstore/ankorstore-cli-core/internal/plugin"
+	"github.com/ankorstore/ankorstore-cli-core/internal/plugin/command"
 )
 
 func IncludeMe(m plugin.Manager) {
