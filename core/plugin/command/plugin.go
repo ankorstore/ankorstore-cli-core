@@ -2,7 +2,6 @@ package command
 
 import (
 	ankor "github.com/ankorstore/ankorstore-cli-core/core/plugin"
-	error_handler "github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
 	"github.com/hashicorp/go-plugin"
 	"github.com/spf13/cobra"
 )
@@ -18,13 +17,13 @@ func (t pluginType) String() string {
 }
 
 func (t pluginType) GRPCClient() (plugin.Plugin, error) {
-	return nil, error_handler.InvalidError{
+	return nil, ankor.InvalidError{
 		Message: "command plugin is not implemented via grpc",
 	}
 }
 
 func (t pluginType) GRPCServer(p ankor.Plugin) (plugin.Plugin, error) {
-	return nil, error_handler.InvalidError{
+	return nil, ankor.InvalidError{
 		Message: "command plugin is not implemented via grpc",
 	}
 }

@@ -23,6 +23,3 @@ type Plugin interface {
 	Init() (PluginConfig, error)
 	Type() Type
 }
-type NotFoundError struct {
-	Plugin string
-}

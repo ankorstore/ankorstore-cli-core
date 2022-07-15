@@ -3,7 +3,6 @@ package plugin
 import (
 	"fmt"
 	"github.com/ankorstore/ankorstore-cli-core/core/util"
-	error_handler "github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
 	log "github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/go-plugin"
 	"os"
@@ -172,7 +171,7 @@ func loadGRPCPlugin(path, pluginType string, grpcPlugin plugin.Plugin) (Plugin, 
 
 	client.Kill()
 
-	return nil, error_handler.InvalidError{
+	return nil, InvalidError{
 		Plugin:  &util.PluginName{Type: pluginType, Name: path},
 		Message: "does not implement Plugin interface",
 	}
