@@ -1,7 +1,7 @@
 package plugin
 
 import (
-	"github.com/ankorstore/ankorstore-cli-core/internal/util"
+	"github.com/ankorstore/ankorstore-cli-core/core/util"
 	"github.com/hashicorp/go-plugin"
 )
 

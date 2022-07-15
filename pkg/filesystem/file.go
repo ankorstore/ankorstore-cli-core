@@ -2,7 +2,7 @@ package filesystem
 
 import (
 	"fmt"
-	util2 "github.com/ankorstore/ankorstore-cli-core/internal/util"
+	util2 "github.com/ankorstore/ankorstore-cli-core/core/util"
 	"github.com/go-errors/errors"
 	"io"
 	"io/fs"

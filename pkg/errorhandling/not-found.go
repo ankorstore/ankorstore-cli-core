@@ -2,7 +2,7 @@ package errorhandling
 
 import (
 	"fmt"
-	"github.com/ankorstore/ankorstore-cli-core/internal/util"
+	"github.com/ankorstore/ankorstore-cli-core/core/util"
 )
 
 type NotFoundError struct {

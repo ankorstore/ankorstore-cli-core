@@ -2,7 +2,7 @@ package plugin
 
 import (
 	"fmt"
-	"github.com/ankorstore/ankorstore-cli-core/internal/util"
+	"github.com/ankorstore/ankorstore-cli-core/core/util"
 	error_handler "github.com/ankorstore/ankorstore-cli-core/pkg/errorhandling"
 	log "github.com/hashicorp/go-hclog"
 	"github.com/hashicorp/go-plugin"

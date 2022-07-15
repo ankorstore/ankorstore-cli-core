@@ -3,7 +3,7 @@ package config
 import (
 	"context"
 	"fmt"
-	util2 "github.com/ankorstore/ankorstore-cli-core/internal/util"
+	util2 "github.com/ankorstore/ankorstore-cli-core/core/util"
 	"github.com/ankorstore/ankorstore-cli-core/pkg/filesystem"
 	"github.com/go-errors/errors"
 	"github.com/rs/zerolog"
