@@ -1,6 +1,7 @@
 package filesystem
 
 import (
+	"bufio"
 	"fmt"
 	util2 "github.com/ankorstore/ankorstore-cli-core/core/util"
 	"github.com/go-errors/errors"
@@ -9,6 +10,7 @@ import (
 	"io/ioutil"
 	"os"
 	"path"
+	"strings"
 )
 
 func SaveBinaryFile(target string, assetReader io.ReadCloser) error {
@@ -108,4 +110,39 @@ func GetFileContent(path string) ([]byte, error) {
 		return nil, err
 	}
 	return b, nil
+}
+
+// WriteToFile Writes text to a file
+func WriteToFile(target string, text string) error {
+	f, err := os.OpenFile(target, os.O_APPEND|os.O_CREATE|os.O_WRONLY, 0644)
+
+	defer f.Close()
+
+	if err != nil {
+		return err
+	}
+
+	if _, err := f.WriteString(text); err != nil {
+		return err
+	}
+
+	return nil
+}
+
+// FileHasText Checks if a file already have specific text
+func FileHasText(target string, text string) (bool, error) {
+	f, err := os.Open(target)
+	if err != nil {
+		return false, err
+	}
+
+	scanner := bufio.NewScanner(f)
+
+	for scanner.Scan() {
+		if strings.Contains(scanner.Text(), text) {
+			return true, nil
+		}
+	}
+
+	return false, nil
 }

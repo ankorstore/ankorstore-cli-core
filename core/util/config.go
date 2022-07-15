@@ -53,3 +53,7 @@ func (d *Dirs) GetPluginsDir() string {
 func (d *Dirs) GetLogsDir() string {
 	return fmt.Sprintf("%s/.%s/logs", d.GetHomeDir(), AppName)
 }
+
+func (d *Dirs) GetCompletionDir() string {
+	return fmt.Sprintf("%s/.%s/completion", d.GetHomeDir(), AppName)
+}
